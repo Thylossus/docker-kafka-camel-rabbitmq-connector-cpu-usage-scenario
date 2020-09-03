@@ -86,6 +86,8 @@ services:
     build: ./kafka-connect
     hostname: kafka_connect
     container_name: camel_demo_kafka_connect
+    cpu_quota: 75000
+    cpu_period: 100000
     ports:
       - "8083:8083"
       - "9010:9010"

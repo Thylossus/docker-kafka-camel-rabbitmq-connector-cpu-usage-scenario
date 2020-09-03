@@ -31,7 +31,7 @@ if [[ ! "$connectors" =~ "$connector_name" ]]; then
           "connector.class": "org.apache.camel.kafkaconnector.rabbitmq.CamelRabbitmqSourceConnector",
           "topics": "$topic_name",
           "value.converter": "org.apache.kafka.connect.converters.ByteArrayConverter",
-          "tasks.max": 10,
+          "tasks.max": 1,
           "camel.component.rabbitmq.hostname": "rabbitmq",
           "camel.component.rabbitmq.portNumber": 5672,
           "camel.component.rabbitmq.username": "$rabbitmq_user",
